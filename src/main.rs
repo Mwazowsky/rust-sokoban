@@ -69,8 +69,8 @@ impl<'a> System<'a> for RenderingSystem<'a> {
         // and draw it at the specified position.
         for (position, renderable) in rendering_data.iter() {
             let image = Image::new(self.context, renderable.path.clone()).expect("expected image");
-            let x = position.x as f32 * TiLE_WIDTH;
-            let y = position.y as f32 * TiLE_WIDTH;
+            let x = position.x as f32 * TILE_WIDTH;
+            let y = position.y as f32 * TILE_WIDTH;
 
             // draw
             let draw_params = DrawParam::new().dest(Vec2::new(x,y));
