@@ -12,7 +12,7 @@ use specs::{
 use std::path;
 
 
-const TiLE_WIDTH: f32 = 32.0;
+const TILE_WIDTH: f32 = 32.0;
 
 // Components
 #[derive(Debug, Component, Clone, Copy)]
@@ -91,7 +91,7 @@ struct Game {
 }
 
 impl event::EventHandler<ggez::GameError> for Game {
-    fn update(&mut self, context: &mut Context) -> GameResult {
+    fn update(&mut self, _context: &mut Context) -> GameResult {
         Ok(())
     }
 
